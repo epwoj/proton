@@ -1,8 +1,6 @@
 <?php
 require_once 'simpletest/simpletest.php';
-echo 'as';ss
-echo 'xczc';
-sxsssssswwwws
+
 /**s
  * Defines the suit of tests to perform on the code view SimpleTest
  *
