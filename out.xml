@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="2.3.2">
+<file name="C:\Users\woj\Desktop\test\tests\phpunit\StackTest.php">
+ <error line="1" column="1" severity="warning" message="A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 33 and the first side effect is on line 21." source="PSR1.Files.SideEffects.FoundWithSymbols"/>
+ <error line="33" column="1" severity="error" message="Each class must be in a namespace of at least one level (a top-level vendor name)" source="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+</file>
+<file name="C:\Users\woj\Desktop\test\tests\simpletest\TestSuite.php">
+ <error line="1" column="1" severity="warning" message="A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 40 and the first side effect is on line 21." source="PSR1.Files.SideEffects.FoundWithSymbols"/>
+ <error line="40" column="1" severity="error" message="Each class must be in a namespace of at least one level (a top-level vendor name)" source="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+ <error line="42" column="5" severity="error" message="Visibility must be declared on method &quot;__construct&quot;" source="Squiz.Scope.MethodScope.Missing"/>
+ <error line="52" column="1" severity="error" message="The closing brace for the class must go on the next line after the body" source="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+ <error line="55" column="35" severity="error" message="Expected 1 newline at end of file; 0 found" source="PSR2.Files.EndFileNewline.NoneFound"/>
+</file>
+<file name="C:\Users\woj\Desktop\test\tests\TestSuite (2).php">
+ <error line="1" column="1" severity="warning" message="A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 40 and the first side effect is on line 21." source="PSR1.Files.SideEffects.FoundWithSymbols"/>
+ <error line="40" column="1" severity="error" message="Each class must be in a namespace of at least one level (a top-level vendor name)" source="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+ <error line="42" column="5" severity="error" message="Visibility must be declared on method &quot;__construct&quot;" source="Squiz.Scope.MethodScope.Missing"/>
+ <error line="52" column="1" severity="error" message="The closing brace for the class must go on the next line after the body" source="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+ <error line="55" column="35" severity="error" message="Expected 1 newline at end of file; 0 found" source="PSR2.Files.EndFileNewline.NoneFound"/>
+</file>
+<file name="C:\Users\woj\Desktop\test\tests\TestSuite.php">
+ <error line="1" column="1" severity="warning" message="No PHP code was found in this file and short open tags are not allowed by this install of PHP. This file may be using short open tags but PHP does not allow them." source="Internal.NoCodeFound"/>
+</file>
+<file name="C:\Users\woj\Desktop\test\TestSuite.php">
+ <error line="1" column="1" severity="warning" message="A file should declare new symbols (classes, functions, constants, etc.) and cause no other side effects, or it should execute logic with side effects, but should not do both. The first symbol is defined on line 44 and the first side effect is on line 2." source="PSR1.Files.SideEffects.FoundWithSymbols"/>
+ <error line="44" column="1" severity="error" message="Each class must be in a namespace of at least one level (a top-level vendor name)" source="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+ <error line="46" column="5" severity="error" message="Visibility must be declared on method &quot;__construct&quot;" source="Squiz.Scope.MethodScope.Missing"/>
+ <error line="56" column="1" severity="error" message="The closing brace for the class must go on the next line after the body" source="PSR2.Classes.ClassDeclaration.CloseBraceAfterBody"/>
+ <error line="59" column="35" severity="error" message="Expected 1 newline at end of file; 0 found" source="PSR2.Files.EndFileNewline.NoneFound"/>
+</file>
+</checkstyle>
+

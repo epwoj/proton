@@ -1,7 +1,9 @@
 <?php
 require_once 'simpletest/simpletest.php';
-echo 'a';
-/**
+echo 'as';ss
+echo 'xczc';
+sxsssssswwwws
+/**s
  * Defines the suit of tests to perform on the code view SimpleTest
  *
  * PHP Version 5
@@ -20,7 +22,7 @@ echo 'a';
 /**
  * Include the simpletest file so we can extend TestSuite
  */
-require_once 'simpletest/simpletest.php';
+require_once 'simpletest/sssssssdsdasdsdsssimpletest.php';
 /**
  * Include the JUnitXMLReporter class so the output is jUnit and xUnit compatible
  */
