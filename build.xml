@@ -138,7 +138,7 @@
   <exec executable="C:\xampp\php\phpcs.bat" taskname="phpcs">
    <arg value="--standard=PSR2" />
    <arg value="--report=checkstyle" />
-   <arg value="--report-file=checkstyle-result.xml" />
+   <arg value="--report-file=checkstyle.xml" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg path="${basedir}" />
