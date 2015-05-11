@@ -6,7 +6,7 @@
  <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
  <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
 
- <target name="build" depends="prepare,lint, phpcs, phpcs-ci" description=""/>
+ <target name="build" depends="prepare,lint, phpcs" description=""/>
  
  
 
@@ -138,7 +138,7 @@
   <exec executable="C:\xampp\php\phpcs.bat" taskname="phpcs">
    <arg value="--standard=PSR2" />
    <arg value="--report=checkstyle" />
-   <arg value="--report-file=out.xml" />
+   <arg value="--report-file=checkstyle-result.xml" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
    <arg path="${basedir}" />
