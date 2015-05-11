@@ -1,5 +1,6 @@
-<?php dssdsadd
+<?php
 require_once 'simpletest/simpletest.php';
+echo 'a';
 /**
  * Defines the suit of tests to perform on the code view SimpleTest
  *

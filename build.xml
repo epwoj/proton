@@ -68,8 +68,7 @@
  
 
 
- <target name="lint"          unless="lint.done"
-         description="Perform syntax check of sourcecode files">
+ <target name="lint" unless="lint.done" description="Perform syntax check of sourcecode files" depends="checkModified" if="modifiedFiles">
   <apply executable="php" failonerror="true" taskname="lint">
    <arg value="-l" />
 
@@ -152,7 +151,7 @@
   <property name="phpmd.done" value="true"/>
  </target>
 
- <target name="phpcs" depends="checkModified"
+ <target name="phpcs" depends="checkModified" if="modifiedFiles"
          unless="phpcs.done"
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
   <exec executable="C:\xampp\php\phpcs.bat" taskname="phpcs">
