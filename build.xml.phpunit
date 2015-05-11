@@ -6,10 +6,10 @@
     <target name="pre-upload" depends="phpcs, phpmd" />
     
    <target name="build"
-       depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdoc,simpletest,phpcb"/>
+       depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdoc,phpunit,phpcb"/>
 
     <target name="build-parallel"
-        depends="prepare,lint,tools-parallel,simpletest,phpcb"/>
+        depends="prepare,lint,tools-parallel,phpunit,phpcb"/>
 
     <target name="tools-parallel" description="Run tools in parallel">
        <parallel threadCount="2">
@@ -141,16 +141,10 @@
            <arg line="--title='test title' -d . -t build/api -i tests/ " />
        </exec>
    </target>
-    
-   <!-- Inline bash script to run TestSuite.php and pipe its results to xmllint -->
-   <!-- XML Lint then outputs the results to simpletest-results.xml -->
-   <target name="simpletest" description="Run SimpleTest unit tests">
-       <exec dir="${basedir}" executable="bash" failonerror="true">
-           <arg value="-c"/>
-           <arg line='"php tests/simpletest/TestSuite.php | xmllint --format -o build/logs/simpletest-results.xml -"' />
-       </exec>
+
+   <target name="phpunit" description="Run unit tests with PHPUnit">
+       <exec executable="phpunit" failonerror="true"/>
    </target>
-    
 
    <target name="phpcb" description="Aggregate tool output with PHP_CodeBrowser">
        <exec executable="phpcb">
