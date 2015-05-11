@@ -6,9 +6,30 @@
  <!-- Uncomment the following when the tools are in ${basedir}/vendor/bin -->
  <!-- <property name="toolsdir" value="${basedir}/vendor/bin/"/> -->
 
- <target name="build" depends="prepare,lint" description=""/>
-
+ <target name="build" depends="prepare,lint, phpcs" description=""/>
  <target name="build-parallel" depends="lint" description=""/>
+ 
+ <target name="checkModified" description="Check for modified php files">
+ 
+    <echo message="Searching for newly modified files" />
+ 
+    <path id="editedfiles">
+        <fileset dir="${basedir}">
+            <modified /> 
+            <include name="**/*.php" />
+            <exclude name="**/vendor/**" />
+        </fileset>
+    </path>
+ 
+    <pathconvert pathsep="${line.separator}" property="files.modified" refid="editedfiles" />
+ 
+    <condition property="modifiedFiles">
+        <not>
+            <equals arg1="${files.modified}" arg2="" />
+        </not>
+    </condition>
+ 
+</target>
 
  <target name="tools-parallel" description="Run tools in parallel">
   <parallel threadCount="2">
@@ -44,6 +65,8 @@
   <mkdir dir="${basedir}/build/phpdox"/>
   <property name="prepare.done" value="true"/>
  </target>
+ 
+
 
  <target name="lint"          unless="lint.done"
          description="Perform syntax check of sourcecode files">
@@ -129,15 +152,14 @@
   <property name="phpmd.done" value="true"/>
  </target>
 
- <target name="phpcs"
+ <target name="phpcs" depends="checkModified"
          unless="phpcs.done"
          description="Find coding standard violations using PHP_CodeSniffer and print human readable output. Intended for usage on the command line before committing.">
-  <exec executable="${toolsdir}phpcs" taskname="phpcs">
+  <exec executable="C:\xampp\php\phpcs.bat" taskname="phpcs">
    <arg value="--standard=PSR2" />
    <arg value="--extensions=php" />
    <arg value="--ignore=autoload.php" />
-   <arg path="${basedir}/src" />
-   <arg path="${basedir}/tests" />
+   <arg path="${basedir}" />
   </exec>
 
   <property name="phpcs.done" value="true"/>
