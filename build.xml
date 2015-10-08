@@ -6,7 +6,7 @@
     <target name="pre-upload" depends="phpcs, phpmd" />
     
    <target name="build"
-       depends="prepare,lint,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdoc,phpunit,phpcb"/>
+       depends="prepare,lint,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpdoc,phpunit,phpcb"/>
 
     <target name="build-parallel"
         depends="prepare,lint,tools-parallel,phpunit,phpcb"/>
